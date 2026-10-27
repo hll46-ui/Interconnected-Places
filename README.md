@@ -4,7 +4,7 @@ This repository holds my spatial history project for the Interconnected Places L
 
 ## About this project
 
-This project maps the Galápagos Islands from 1979-2019 and the network of places its conservation protections connected it to — Ecuador, the United States of America, and some countries across eastern Europe.
+This project maps the Galápagos Islands from 1979-2019 and the network of places its conservation protections connected it to — Ecuador, the United States of America, China, Japan, and some countries across eastern Europe.
 
 ## The files
 
