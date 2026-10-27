@@ -4,9 +4,7 @@ This repository holds my spatial history project for the Interconnected Places L
 
 ## About this project
 
-*(Replace this with a sentence or two about your own place: what it is, the time period, and what its main connections are.)*
-
-Example: This project maps Bombay in the late nineteenth century and the network of places its cotton-textile industry connected it to — across Maharashtra and around the Indian Ocean world.
+This project maps the Galapagos Islands from 1979-2019 and the network of places its conservation protections connected it to — Ecuador, the United States of America, and some countries across eastern Europe.
 
 ## The files
 
