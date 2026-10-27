@@ -1,10 +1,10 @@
-# Interconnected Places — The Galapagos: A Journey in Conservation
+# Interconnected Places — The Galápagos Islands: A Journey in Conservation and Conflict
 
 This repository holds my spatial history project for the Interconnected Places Lab (HIST 1907). It maps one place and the places it was connected to.
 
 ## About this project
 
-This project maps the Galapagos Islands from 1979-2019 and the network of places its conservation protections connected it to — Ecuador, the United States of America, and some countries across eastern Europe.
+This project maps the Galápagos Islands from 1979-2019 and the network of places its conservation protections connected it to — Ecuador, the United States of America, and some countries across eastern Europe.
 
 ## The files
 
