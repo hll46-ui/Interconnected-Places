@@ -1,4 +1,4 @@
-# Interconnected Places — The Galápagos Islands: A Journey in Conservation and Conflict
+# Interconnected Places — The Galápagos: A Journey in Conservation and Conflict
 
 This repository holds my spatial history project for the Interconnected Places Lab (HIST 1907). It maps one place and the places it was connected to.
 

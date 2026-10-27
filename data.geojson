@@ -342,6 +342,28 @@
                 "Type": "Within",
                 "Source": "https://www.nature.com/articles/s41598-021-94126-3"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.606,
+                    -0.9066
+                ]
+            },
+            "bbox": [
+                -92.054443,
+                -1.724593,
+                -88.670654,
+                0.900842
+            ],
+            "properties": {
+                "Name": "The Galápagos Islands",
+                "Date": "1979-2019",
+                "Description": "This is the main place. The Galápagos Islands are a volcanic archipelago in the Pacific Ocean located west of mainland Ecuador. These islands are classified as a province of Ecuador.",
+                "Type": "Within"
+            }
         }
     ]
 }

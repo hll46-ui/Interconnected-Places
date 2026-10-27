@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Galapagos Islands: A Journey in Conservation and Conflict</title>
+  <title>The Galápagos Islands: A Journey in Conservation and Conflict</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     html, body { margin: 0; height: 100%; font-family: system-ui, sans-serif; }
@@ -22,43 +22,386 @@
 </head>
 <body>
   <div class="title-card">
-    <h1>The Galapagos Islands: A Journey in Conservation and Conflict</h1>
+    <h1>The Galápagos Islands: A Journey in Conservation and Conflict</h1>
     <p>Click any point to read about it. Click it again to zoom in.</p>
   </div>
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-  const MAIN_PLACE = "The Galapagos Islands";
+  const MAIN_PLACE = "The Galápagos Islands";
   const START_ZOOM = 4;
   const CLICK_ZOOM = 12;
 
   const data = {
     "type": "FeatureCollection",
     "features": [
-      {"type":"Feature","properties":{"Name":"Bombay","Date":"1880s","Description":"The cotton-mill capital of western India, in Maharashtra. This is the MAIN place."},"geometry":{"type":"Point","coordinates":[72.8258,18.9750]}},
-      {"type":"Feature","properties":{"Name":"Girangaon","Date":"1880s","Description":"The mill district at the heart of Bombay, where much of the textile workforce lived and worked."},"geometry":{"type":"Point","coordinates":[72.8300,18.9900]}},
-      {"type":"Feature","properties":{"Name":"Bombay Harbour","Date":"19th century","Description":"The deep-water port that made Bombay a hub for cotton exports and imports."},"geometry":{"type":"Point","coordinates":[72.8400,18.9200]}},
-      {"type":"Feature","properties":{"Name":"Elephanta Caves","Date":"ancient","Description":"Rock-cut temples on an island in Bombay Harbour, part of the region's older layered history."},"geometry":{"type":"Point","coordinates":[72.9315,18.9633]}},
-      {"type":"Feature","properties":{"Name":"Pune","Date":"19th century","Description":"A major inland Maharashtra city connected to Bombay by trade and, later, rail."},"geometry":{"type":"Point","coordinates":[73.8567,18.5204]}},
-      {"type":"Feature","properties":{"Name":"Nashik","Date":"19th century","Description":"A Maharashtra city on the Godavari, linked to Bombay through regional trade and pilgrimage routes."},"geometry":{"type":"Point","coordinates":[73.7898,19.9975]}},
-      {"type":"Feature","properties":{"Name":"Nagpur","Date":"19th century","Description":"A central-Maharashtra city and a cotton-growing and trading center feeding the mills."},"geometry":{"type":"Point","coordinates":[79.0882,21.1458]}},
-      {"type":"Feature","properties":{"Name":"Kolhapur","Date":"19th century","Description":"A city in southern Maharashtra tied into regional textile and trade networks."},"geometry":{"type":"Point","coordinates":[74.2433,16.7050]}},
-      {"type":"Feature","properties":{"Name":"Ratnagiri","Date":"1880s","Description":"A Konkan-coast district that sent many migrant workers to Bombay's mills."},"geometry":{"type":"Point","coordinates":[73.3120,16.9902]}},
-      {"type":"Feature","properties":{"Name":"Ahmednagar","Date":"19th century","Description":"An inland Maharashtra town connected to Bombay through regional commerce."},"geometry":{"type":"Point","coordinates":[74.7480,19.0948]}},
-      {"type":"Feature","properties":{"Name":"Solapur","Date":"19th century","Description":"A Maharashtra textile town and a center of cotton weaving connected to Bombay."},"geometry":{"type":"Point","coordinates":[75.9064,17.6599]}},
-      {"type":"Feature","properties":{"Name":"Manchester","Date":"19th century","Description":"The center of Britain's cotton industry; source of mill machinery and a competitor to Bombay's mills."},"geometry":{"type":"Point","coordinates":[-2.2426,53.4808]}},
-      {"type":"Feature","properties":{"Name":"Liverpool","Date":"19th century","Description":"The British port through which cotton and goods moved between Britain and Bombay."},"geometry":{"type":"Point","coordinates":[-2.9916,53.4084]}},
-      {"type":"Feature","properties":{"Name":"London","Date":"19th century","Description":"The imperial capital and financial center that shaped Bombay's trade and industry."},"geometry":{"type":"Point","coordinates":[-0.1278,51.5074]}},
-      {"type":"Feature","properties":{"Name":"Shanghai","Date":"1890s","Description":"A major overseas market for Bombay mill yarn across the Indian Ocean and to East Asia."},"geometry":{"type":"Point","coordinates":[121.4737,31.2304]}},
-      {"type":"Feature","properties":{"Name":"Hong Kong","Date":"19th century","Description":"A British trading hub on the route east, linked to Bombay's export trade."},"geometry":{"type":"Point","coordinates":[114.1694,22.3193]}},
-      {"type":"Feature","properties":{"Name":"Singapore","Date":"19th century","Description":"A key entrepot on the shipping route between Bombay and East Asia."},"geometry":{"type":"Point","coordinates":[103.8198,1.3521]}},
-      {"type":"Feature","properties":{"Name":"Zanzibar","Date":"19th century","Description":"An Indian Ocean market for Indian cotton cloth through long-standing trade networks."},"geometry":{"type":"Point","coordinates":[39.2026,-6.1659]}},
-      {"type":"Feature","properties":{"Name":"Aden","Date":"19th century","Description":"A coaling and trade waypoint on the sea route between Bombay and Europe."},"geometry":{"type":"Point","coordinates":[45.0367,12.7794]}},
-      {"type":"Feature","properties":{"Name":"Suez","Date":"1869","Description":"The canal, opened in 1869, that shortened the sea route between Bombay and Britain."},"geometry":{"type":"Point","coordinates":[32.5498,29.9668]}},
-      {"type":"Feature","properties":{"Name":"Yokohama","Date":"late 19th century","Description":"A Japanese port connected to Bombay through East Asian trade."},"geometry":{"type":"Point","coordinates":[139.6380,35.4437]}}
-    ]
-  };
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.51131,
+                    -0.221173
+                ]
+            },
+            "bbox": [
+                -78.948005,
+                -0.59067,
+                -78.165124,
+                0.277267
+            ],
+            "properties": {
+                "Name": "Quito, Ecuador",
+                "Date": "1998-2019",
+                "Description": "Quito is home to Ecuador's national government and courts. These institutions establish and enforce many of the Galapagos' protections. In 1998, the Educadorian national government established the legal framework for the marine reserve. Then from 2017-2019, national authorities prosecuted a chinese vessel for illegal fishing. ",
+                "Source": "https://www.fiscalia.gob.ec/corte-nacional-acepto-recurso-de-casacion-por-delito-contra-la-flora-y-fauna-silvestres-en-galapagos/",
+                "Type": "Connected"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.30599,
+                    48.849657
+                ]
+            },
+            "properties": {
+                "Name": "Paris, France",
+                "Date": "2001, 2007-2010",
+                "Description": "At the UNESCO's World Heritage Centre headquarters, they oversee the international recognition of the Galapagos Islands and marine reserve. The Galápagos marine reserve's inclusion in the World Heritage Site in 2001 and the islands' danger listing in 2007 connected local conservation issues to international oversight. The islands were removed from the danger list in 2010.",
+                "Type": "Connected",
+                "Source": "https://whc.unesco.org/en/list/001/"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.100876,
+                    51.503829
+                ]
+            },
+            "properties": {
+                "Name": "London, United Kingdom",
+                "Date": 1995,
+                "Type": "Connected",
+                "Description": "The Galápagos Conservation Trust was established in 1995 and supports conservation in the islands. It is an important part of how overseas nonprofit organizations contribute to conservation beyond their own countries. ",
+                "Source": "https://galapagosconservation.org.uk/30-years-of-galapagos-conservation-trust/"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.27796,
+                    46.415917
+                ]
+            },
+            "properties": {
+                "Name": "Gland, Switzerland",
+                "Date": 2007,
+                "Description": "IUCN is an international conservation organization based in Gland. Its involvement in the 2007 UNESCO assessment connects scientific and conservation expertise to the evaluation of threats facing the Galápagos.",
+                "Source": "https://whc.unesco.org/en/news/322",
+                "Type": "Connected"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.043144,
+                    38.900488
+                ]
+            },
+            "properties": {
+                "Name": "Washington DC, United States",
+                "Type": "Connected",
+                "Date": "1997-2006",
+                "Description": "The Global Environment Facility supports international environmental projects. It is a potential horizontal connection for examining how international finance supports conservation programs addressing invasive species.",
+                "Source": "https://www.galapagos.org/conservation/project-isabela/"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.968273,
+                    40.749061
+                ]
+            },
+            "properties": {
+                "Name": "New York, United States",
+                "Date": "1997-2006",
+                "Description": "The United Nations Development Programme participates in international development and environmental initiatives. This location could represent the role of international development institutions in conservation, provided you confirm its specific participation in a Galápagos invasive-species program.",
+                "Source": "https://www.galapagos.org/conservation/project-isabela/",
+                "Type": "Connected"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.72601,
+                    -0.94044
+                ]
+            },
+            "properties": {
+                "Name": "Manta, Ecuador",
+                "Date": "1990-2010",
+                "Type": "Connected",
+                "Description": "Manta is a major Ecuadorian fishing port and offers a way to investigate the mainland fishing industry and its relationship with marine resources.",
+                "Source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9116705/"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.911814,
+                    -2.277331
+                ]
+            },
+            "properties": {
+                "Name": "Guayaquil, Ecuador",
+                "Date": "1990-2010",
+                "Description": "Guayaquil was the epicentre for rapid, unregulated mainland migration to the islands during the tourism boom of the 1980s and 1990s. Thousands of workers bypassed early quarantine protocols here, introducing domestic pets that carried deadly canine distemper directly to Galápagos sea lion colonies.",
+                "Type": "Connected"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    113.258013,
+                    23.112853
+                ]
+            },
+            "properties": {
+                "Name": "Guangzhou, China",
+                "Date": "1990-2017",
+                "Source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9116705/",
+                "Description": "This region served as the primary destination and financial engine for the illicit global shark fin and sea cucumber trade. The skyrocketing prices offered by syndicates here directly triggered the violent \"Sea Cucumber Gold Rush\" and illegal shark finning by poachers inside the Galápagos throughout the 1990s and 2000s.",
+                "Type": "Connected"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.770808,
+                    35.667751
+                ]
+            },
+            "properties": {
+                "Name": "Tokyo, Japan",
+                "Description": "Japan's insatiable luxury market for premium bigeye and yellowfin tuna during the late 20th century drove international industrial long-liners to fish right up against the borders of the Galápagos, creating a constant game of cat-and-mouse between foreign poachers and the under-equipped Ecuadorian Navy.",
+                "Type": "Connected",
+                "Date": "1980-2000"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.74812,
+                    -0.15443
+                ]
+            },
+            "properties": {
+                "Type": "Within",
+                "Name": "Galápagos Marine Reserve",
+                "Date": 1986,
+                "Description": "Ecuador established a marine resources reserve around the Galápagos to help manage marine resources and address fishing pressures. This was an early step toward the stronger marine protections introduced in 1998.",
+                "Source": "https://www.mdpi.com/2071-1050/10/4/1228"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.313786,
+                    -0.742586
+                ]
+            },
+            "properties": {
+                "Name": "Violent Protests",
+                "Date": "1994-2004",
+                "Description": "Puetro Ayora, on Santa Cruz Island, through much of the 1990s and early 2000s, experienced numerous violent revolts by local fishermen in response to sea cucumber and fishing limitations. In 1995, fishermen and ecuadorian congressmen led a 22-day illegal takeover of park facilities in response to fishing bans. Some of the violence that occured during these revolts included slitting the throats of nine giant tortoises at the Santa Cruz breeding center. In 2000, fishermen burned down the national park headquarters, engaged in street battles with police, and hung giant tortoises from trees to protest ongoing marine harvest restrictions. In 2004, demanding the right to use industrial long-line fishing methods and larger nets inside the protected marine reserve, hundreds of artisanal fishermen blockaded the Charles Darwin Research Station. This tense standoff haulted Puerto Ayora's operations until the Minister of the Environment arrived to negotiate a temporary compromise.",
+                "Type": "Within",
+                "Source": "https://octogroup.org/news/ecuadorian-government-agrees-review-galapagos-fisheries-regulations-following-seizure/\nhttps://www.sfgate.com/news/article/turmoil-in-paradise-galapagos-fishermen-revolt-3236289.php"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.2659,
+                    -0.4531
+                ]
+            },
+            "properties": {
+                "Date": 1998,
+                "Name": "Special Law",
+                "Description": "Growing concerns about overfishing, environmental damage, population growth, and conflict between fishermen and conservation officials led Ecuador to pass the Special Law for Galápagos in 1998. The law expanded the marine reserve, restricted industrial fishing, regulated development and immigration, and established a more collaborative approach to conservation management. It marked a major step toward balancing environmental protection with the needs of local communities. The location to represent this monumental change in the islands conservation policy is the Seymour Airport on Baltra Island. The Seymour airport is the major entry point for people arriving from mainland Ecuador but the 1998 law introduced residency and migration controls intended to limit the population growth, protect the islands' ecosystem, and ease the financial burden placed on locals from the lack of resources. ",
+                "Type": "Within"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.12,
+                    -0.43
+                ]
+            },
+            "properties": {
+                "Name": "Project Isabela",
+                "Description": "Isabela Island had been a dumping ground for goats and other large mammals that would then damage native vegetation and wildlife habitat. The Charles Darwin Foundation and Galápagos National Park authorities conducted a major eradication program known as \"Project Isabela.\"",
+                "Type": "Within",
+                "Source": "https://www.galapagos.org/conservation/project-isabela/",
+                "Date": "1997-2006"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.62974,
+                    -0.89605
+                ]
+            },
+            "properties": {
+                "Name": "Oil Spill",
+                "Description": "Schiavoni Reef, where the tanker named Jessica, ran aground near San Cristóbal Island. In the process it released fuel into the marine environment. The incident prompted an emergency response and highlighted risks associated with shipping, fuel transport, and environmental management.",
+                "Type": "Within",
+                "Date": 2001,
+                "Source": "https://whc.unesco.org/en/decisions/5876/"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.76451,
+                    -0.06512
+                ]
+            },
+            "properties": {
+                "Name": "World Heritage Site",
+                "Type": "Within",
+                "Date": 2001,
+                "Description": "The Galapagos Marine Reserve was added to the World Heritage Site in 2001.",
+                "Source": "https://whc.unesco.org/en/list/00001/maps/"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.616192,
+                    -0.908297
+                ]
+            },
+            "properties": {
+                "Name": "Biosecurity",
+                "Description": "San Cristobal Airport (SCY) on San Cristobal Island is one of two commerical airports in the Galapagos Islands. This aiport is located near the tourist area, Puerto Baquerizo Moreno. The other airport is Seymour Ecological Airport (GPS) on Baltra Island. Both airports are regulated by the Agency for the Regulation and Control of Biosecurity and Quarantine for Galápagos (ABG); established in 2012. ",
+                "Type": "Within",
+                "Date": 2003
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.7537,
+                    -0.2653
+                ]
+            },
+            "properties": {
+                "Name": "In Danger",
+                "Date": 2007,
+                "Description": "The Galapagos listed as world heritage in danger.",
+                "Type": "Within",
+                "Source": "https://whc.unesco.org/en/list/1/"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.66731,
+                    -0.606165
+                ]
+            },
+            "properties": {
+                "Name": "Project Pinzón",
+                "Date": "2012-2014",
+                "Source": "https://www.galapagos.org/conservation/project-pinzon/",
+                "Type": "Within",
+                "Description": "Pinzón Island had been infested with black rats that preyed on Pinzón giant tortoise eggs and hatchlings, preventing successful natural reproduction for more than a century. In December 2012, the Galápagos National Park Directorate and conservation partners eradicated the rats from the island. By December 2014, researchers had found wild-born tortoise hatchlings, demonstrating the success of the restoration effort."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.246439,
+                    -0.716743
+                ]
+            },
+            "properties": {
+                "Name": "Illegal Fishing",
+                "Date": "2015-2019",
+                "Description": "A Chinese vessel named, Fu Yuan Yu Leng 999, was detained at Punta Pitt on San Cristobal Island, within the Galapagos Marine Reserve. ",
+                "Type": "Within",
+                "Source": "https://www.nature.com/articles/s41598-021-94126-3"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.606,
+                    -0.9066
+                ]
+            },
+            "bbox": [
+                -92.054443,
+                -1.724593,
+                -88.670654,
+                0.900842
+            ],
+            "properties": {
+                "Name": "The Galápagos Islands",
+                "Date": "1979-2019",
+                "Description": "This is the main place. The Galápagos Islands are a volcanic archipelago in the Pacific Ocean located west of mainland Ecuador. These islands are classified as a province of Ecuador.",
+                "Type": "Within"
+            }
+          }
+  ]
+}
 
   const map = L.map("map");
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
