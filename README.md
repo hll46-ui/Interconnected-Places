@@ -26,4 +26,4 @@ Every place has three pieces of information, spelled exactly this way:
 
 ## My live map
 
-*(After you turn on GitHub Pages, paste your public link here.)*
+[https://hll46-ui.github.io/Interconnected-Places/](https://hll46-ui.github.io/Interconnected-Places/)
